@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Бесплатная концепция сада — Ландшафтный дизайн для частных участков</title>
+  <meta name="description" content="Бесплатная предварительная концепция ландшафтного проекта: два варианта концепции, подбор растений, технологические карты и авторский надзор. Работаем в Венгрии, Австрии, Словакии и Чехии.">
+  <style>
+    :root{
+      --bg:#f7f7f7;
+      --card:#ffffff;
+      --muted:#6b6b6b;
+      --accent:#2f9a4a; /* green */
+      --accent-dark:#23773a;
+      --grey:#e6e6e6;
+      --max-width:1100px;
+      font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color:#222;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,var(--bg),#ffffff);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+
+    .container{
+      width:95%;
+      max-width:var(--max-width);
+      margin:0 auto;
+      padding:28px 16px;
+    }
+
+    /* Header / Nav */
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      padding:12px 0;
+      margin-bottom:18px;
+    }
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .logo{
+      width:54px;height:54px;border-radius:10px;
+      background:linear-gradient(135deg,var(--accent),#6cc071);
+      display:flex;align-items:center;justify-content:center;
+      color:white;font-weight:700;font-size:20px;box-shadow:0 3px 10px rgba(47,154,74,0.18);
+    }
+    .brand .title{
+      font-weight:700;font-size:16px;
+      color:#222;
+    }
+    .contact{
+      text-align:right;
+      font-size:14px;
+    }
+    .contact a{color:var(--accent);text-decoration:none;font-weight:600}
+    .contact .small{display:block;color:var(--muted);font-size:13px}
+
+    /* Hero */
+    .hero{
+      display:grid;
+      grid-template-columns: 1fr 420px;
+      gap:28px;
+      align-items:center;
+      margin:18px 0 36px 0;
+    }
+    @media (max-width:940px){ .hero{grid-template-columns:1fr;}}
+    .hero-left{
+      background:linear-gradient(180deg,#fff, #fbfbfb);
+      padding:28px;border-radius:14px;box-shadow:0 6px 20px rgba(18,18,18,0.04);
+    }
+    h1{
+      margin:0 0 12px 0;
+      font-size:32px;
+      line-height:1.05;
+      color:#0f1720;
+    }
+    h2.sub{
+      margin:0 0 18px 0;color:var(--muted);font-weight:500;font-size:16px;
+    }
+    .slogan{color:var(--muted);font-size:15px;margin-bottom:18px}
+    .cta-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;
+      background:var(--accent);color:white;padding:12px 18px;border-radius:10px;
+      border:0;font-weight:700;font-size:15px;cursor:pointer;box-shadow:0 6px 18px rgba(47,154,74,0.18);
+    }
+    .btn.secondary{
+      background:transparent;color:var(--accent-dark);border:1.5px solid var(--grey);font-weight:600;
+    }
+
+    .hero-right{
+      background:linear-gradient(180deg,#ffffff, #fcfffb);
+      border-radius:12px;padding:18px;box-shadow:0 6px 22px rgba(18,18,18,0.05);
+      border:1px solid var(--grey);
+    }
+    .lead-form label{font-size:13px;color:var(--muted)}
+    .input, .select{
+      width:100%;padding:12px;border-radius:8px;border:1px solid #e7e7e7;margin-top:8px;font-size:15px;
+    }
+    .small-note{font-size:13px;color:var(--muted);margin-top:10px}
+
+    /* Features */
+    .grid{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:26px 0;
+    }
+    @media (max-width:940px){.grid{grid-template-columns:repeat(1,1fr)}}
+    .card{background:var(--card);padding:18px;border-radius:12px;border:1px solid var(--grey);}
+    .card h3{margin:0 0 8px 0;font-size:16px}
+    .muted{color:var(--muted);font-size:14px}
+
+    /* Service / list */
+    .service-list{display:flex;flex-direction:column;gap:10px}
+    .service-item{display:flex;gap:12px;align-items:flex-start}
+    .marker{width:44px;height:44px;border-radius:10px;background:#f2fbf4;color:var(--accent-dark);display:flex;align-items:center;justify-content:center;font-weight:700}
+
+    /* Pricing */
+    .pricing{display:flex;gap:16px;align-items:stretch;margin:26px 0}
+    @media (max-width:940px){.pricing{flex-direction:column}}
+    .price-card{flex:1;padding:18px;border-radius:12px;background:linear-gradient(180deg,#fff,#fafafa);border:1px solid var(--grey)}
+    .price-big{font-size:22px;font-weight:800;color:var(--accent-dark)}
+
+    /* FAQ */
+    details{background:var(--card);padding:14px;border-radius:10px;border:1px solid var(--grey);margin:10px 0}
+    summary{font-weight:700;cursor:pointer}
+    .faq p{margin:8px 0 0 0;color:var(--muted)}
+
+    /* Footer */
+    footer{margin-top:36px;padding:28px 0;border-top:1px solid #efefef}
+    .footer-grid{display:flex;justify-content:space-between;gap:18px;align-items:flex-start}
+    @media (max-width:740px){.footer-grid{flex-direction:column}}
+    .social a{display:inline-block;margin-right:10px;color:var(--muted);text-decoration:none;font-weight:700}
+    .legal{color:var(--muted);font-size:13px;margin-top:12px}
+
+    /* small helpers */
+    .muted-2{color:#8d8d8d;font-size:13px}
+    .center{text-align:center}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:#f0fff5;color:var(--accent-dark);font-weight:700;font-size:13px}
+
+    /* success modal */
+    .modal{
+      position:fixed;left:0;top:0;right:0;bottom:0;display:none;align-items:center;justify-content:center;
+      background:rgba(10,10,10,0.35);z-index:50;padding:20px;
+    }
+    .modal .box{background:white;padding:22px;border-radius:12px;max-width:480px;width:100%;text-align:center}
+    .close{background:transparent;border:0;margin-top:14px;color:var(--muted);cursor:pointer}
+    footer .phone{font-weight:800;color:var(--accent-dark)}
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">G</div>
+        <div>
+          <div class="title">GardenSopron — Ландшафтный дизайн</div>
+          <div class="muted-2">Работаем: HU • AT • SK • CZ</div>
+        </div>
+      </div>
+      <div class="contact">
+        <a href="https://wa.me/36307148961" target="_blank">+36 30 714 89 61</a>
+        <div class="small">доступен WhatsApp, Viber, Telegram</div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="hero">
+      <div class="hero-left">
+        <h1>Ландшафтный дизайн частных участков — бесплатная концепция</h1>
+        <h2 class="sub">Создаем функциональные и красивые сады для жизни — от идеи до реализации.</h2>
+        <div class="slogan">Сад вашей мечты — сначала бесплатно. Два варианта концепции под ваш участок.</div>
+
+        <div class="cta-row">
+          <button class="btn" id="ctaFree">Заказать бесплатную концепцию</button>
+          <a class="btn secondary" href="#services">Узнать о проекте</a>
+        </div>
+
+        <p class="small-note">Мы работаем с собственниками частных участков, которые ранее не планировали обращаться к дизайнеру — и показываем, как легко и без риска получить свежую концепцию вашего сада бесплатно.</p>
+      </div>
+
+      <aside class="hero-right" aria-label="форма">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+          <div style="font-weight:800">Бесплатная концепция</div>
+          <div class="pill">2 варианта</div>
+        </div>
+
+        <form id="leadForm" class="lead-form" onsubmit="return false;">
+          <label>Имя</label>
+          <input class="input" id="name" placeholder="Ваше имя (необязательно)">
+
+          <label style="margin-top:10px">Телефон</label>
+          <input class="input" id="phone" placeholder="+36 30 714 8961" required>
+
+          <label style="margin-top:10px">Страна</label>
+          <select id="country" class="select">
+            <option value="HU">Венгрия</option>
+            <option value="AT">Австрия</option>
+            <option value="SK">Словакия</option>
+            <option value="CZ">Чехия</option>
+          </select>
+
+          <label style="margin-top:10px">Коротко о желаемом (например, "малый сад с вечнозелёными", "зона барбекю")</label>
+          <input class="input" id="notes" placeholder="Ваши пожелания (площадь, стиль, фото участка...)">
+
+          <div style="margin-top:12px;display:flex;gap:8px;align-items:center">
+            <input type="checkbox" id="consent" checked>
+            <label for="consent" class="muted-2">Согласие на обработку контактов для связи</label>
+          </div>
+
+          <div style="display:flex;gap:10px;margin-top:14px">
+            <button class="btn" id="submitBtn">Получить бесплатную концепцию</button>
+            <button class="btn secondary" id="callBtn" type="button" onclick="window.open('https://wa.me/36307148961','_blank')">Позвонить / WhatsApp</button>
+          </div>
+
+          <div class="small-note">После отправки мы подготовим 2 концепции и свяжемся для уточнений.</div>
+        </form>
+      </aside>
+    </section>
+
+    <!-- Advantages -->
+    <section id="about">
+      <div class="grid">
+        <div class="card">
+          <h3>Команда профессионалов</h3>
+          <div class="muted">Опытные ландшафтные дизайнеры, агрономы и технологи. Подбор растений с учётом климата региона и условий участка.</div>
+        </div>
+        <div class="card">
+          <h3>Что вы получаете бесплатно</h3>
+          <div class="muted">Две общие концепции ландшафта по заданным данным — бесплатно. Никаких обязательств до утверждения концепции.</div>
+        </div>
+        <div class="card">
+          <h3>Полный цикл</h3>
+          <div class="muted">После утверждения концепции — платные замеры, проектная документация, помощь с поиском подрядчиков, авторский надзор.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services / what included -->
+    <section id="services">
+      <div class="card" style="margin-bottom:18px">
+        <h3>Наш процесс — просто и прозрачно</h3>
+        <div class="muted" style="margin-bottom:12px">Мы предлагаем: бесплатная предварительная работа — далее платные услуги только при вашем согласии.</div>
+
+        <div class="service-list">
+          <div class="service-item">
+            <div class="marker">1</div>
+            <div>
+              <strong>Сбор данных</strong>
+              <div class="muted">Вы заполняете краткую форму, отправляете фото/чертеж участка (если есть) — либо мы ориентируемся по вашим описаниям.</div>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="marker">2</div>
+            <div>
+              <strong>Две концепции (бесплатно)</strong>
+              <div class="muted">Мы готовим 2 разных варианта планировки, стилистики и посадок, чтобы вы могли выбрать направление.</div>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="marker">3</div>
+            <div>
+              <strong>Проектная документация (платно)</strong>
+              <div class="muted">Если вас устраивает концепция — выполняем замеры (при необходимости) и готовим полный пакет документов.</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px">
+          <strong>Типовой пакет проектной документации включает:</strong>
+          <ul class="muted" style="margin-top:8px">
+            <li>Генеральный план (план благоустройства)</li>
+            <li>План посадок с перечнем растений и количества</li>
+            <li>Технологические карты посадки и ухода</li>
+            <li>Схемы освещения и полива (при необходимости)</li>
+            <li>Смета материалов и рекомендации по подрядчикам</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing">
+      <div class="pricing">
+        <div class="price-card">
+          <div class="muted">Концепция</div>
+          <div class="price-big">БЕСПЛАТНО</div>
+          <div class="muted">Мы готовим <strong>2 общих концепции</strong> без оплаты — вы решаете, какой путь ближе.</div>
+        </div>
+
+        <div class="price-card">
+          <div class="muted">Полный проект (документация)</div>
+          <div class="price-big">от 1 000 HUF / м² <span style="font-size:14px;color:var(--muted)"> (~€2.57 / м²)</span></div>
+          <div class="muted" style="margin-top:8px">Замеры, составление рабочей документации, смета материалов — оплачиваются отдельно. Авторский надзор и помощь с подрядчиками — по договорённости.</div>
+        </div>
+
+        <div class="price-card">
+          <div class="muted">Дополнительно</div>
+          <div style="margin-top:6px" class="muted">
+            Замеры участка — от 40 EUR (ориентир).<br>
+            Авторский надзор — по договорённости.<br>
+            Скидки на растения и поставки для клиентов.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <h3>Часто задаваемые вопросы</h3>
+
+      <div class="faq" style="margin-top:12px">
+        <details>
+          <summary>1. Действительно ли концепция бесплатна?</summary>
+          <p>Да. Мы предоставляем две общие концепции бесплатно. Платные работы начинаются только после того, как вы одобрите концепцию и захотите проектную документацию или реализацию.</p>
+        </details>
+
+        <details>
+          <summary>2. Нужно ли предоставлять точные размеры участка?</summary>
+          <p>Не обязательно: вы можете прислать примерные данные или фото. Для подготовки рабочей документации и смет понадобятся точные замеры — мы можем выполнить их платно или принять ваши данные.</p>
+        </details>
+
+        <details>
+          <summary>3. Можно ли общаться на русском языке?</summary>
+          <p>Да. Наша команда свободно общается на русском и венгерском; при необходимости подключаем переводчиков для других языков региона.</p>
+        </details>
+
+        <details>
+          <summary>4. Работаете ли вы в моей стране?</summary>
+          <p>Работаем по всей территории Венгрии, Австрии, Словакии и Чехии. Для других регионов возможны выезды/онлайн-решения по договорённости.</p>
+        </details>
+
+        <details>
+          <summary>5. Как быстро я получу концепцию?</summary>
+          <p>После получения необходимой информации мы обычно готовим концепции в течение 5–12 рабочих дней (зависит от сложности и загруженности).</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-grid">
+        <div>
+          <div style="font-weight:800;font-size:18px">GardenSopron — ландшафтный дизайн</div>
+          <div class="muted" style="margin-top:8px">Бесплатная предварительная концепция — два варианта. Работаем в Венгрии, Австрии, Словакии и Чехии.</div>
+          <div class="legal">E-mail: <a href="mailto:info@gardensopron.example">info@gardensopron.example</a></div>
+        </div>
+
+        <div style="text-align:right">
+          <div class="phone"><a href="https://wa.me/36307148961" style="text-decoration:none;color:inherit">+36 30 714 89 61</a></div>
+          <div class="muted-2">доступен через WhatsApp • Viber • Telegram</div>
+
+          <div class="social" style="margin-top:12px">
+            <a href="https://www.facebook.com/profile.php?id=61556612697491" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/garden_sopron?igsh=MWJiYTg2Y3drNHk3ZA%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+          </div>
+
+          <div class="muted" style="margin-top:12px;font-size:13px">© <span id="year"></span> GardenSopron. Все права защищены.</div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="box">
+      <h3>Спасибо! Заявка отправлена</h3>
+      <p class="muted">Мы свяжемся с вами в ближайшее время для уточнения деталей. Можете также продолжить в WhatsApp.</p>
+      <div style="display:flex;gap:10px;justify-content:center;margin-top:12px">
+        <button class="btn" id="openWa">Открыть WhatsApp</button>
+        <button class="close" id="closeModal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Insert current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Open modal & WhatsApp flow
+    const ctaFree = document.getElementById('ctaFree');
+    const submitBtn = document.getElementById('submitBtn');
+    const modal = document.getElementById('modal');
+    const closeModal = document.getElementById('closeModal');
+    const openWa = document.getElementById('openWa');
+
+    function sanitizePhone(input) {
+      return input.replace(/[^+\d]/g,'');
+    }
+
+    function validatePhone(phone){
+      // basic validation: must have at least 8 digits
+      const digits = phone.replace(/\D/g,'');
+      return digits.length >= 8;
+    }
+
+    function prepareWaLink(name, phone, country, notes){
+      const base = "https://wa.me/36307148961";
+      const msg = `Здравствуйте! Я заказал бесплатную концепцию сада.%0AИмя: ${encodeURIComponent(name)}%0AТелефон: ${encodeURIComponent(phone)}%0AСтрана: ${encodeURIComponent(country)}%0AПожелания: ${encodeURIComponent(notes)}`;
+      return base + "?text=" + msg;
+    }
+
+    function openModal(){
+      modal.style.display = "flex";
+    }
+    function closeModalFn(){ modal.style.display = "none"; }
+
+    ctaFree.addEventListener('click', () => {
+      document.getElementById('name').focus();
+      window.scrollTo({top:0,behavior:'smooth'});
+    });
+
+    submitBtn.addEventListener('click', () => {
+      const name = document.getElementById('name').value.trim();
+      let phone = document.getElementById('phone').value.trim();
+      const country = document.getElementById('country').value;
+      const notes = document.getElementById('notes').value.trim();
+      const consent = document.getElementById('consent').checked;
+
+      if(!consent){
+        alert('Пожалуйста, согласитесь на обработку контактов для связи.');
+        return;
+      }
+      if(!phone || !validatePhone(phone)){
+        alert('Пожалуйста, укажите корректный телефон (минимум 8 цифр).');
+        document.getElementById('phone').focus();
+        return;
+      }
+      phone = sanitizePhone(phone);
+
+      // Show modal
+      openModal();
+
+      // Pre-fill WhatsApp message when user clicks Open WhatsApp
+      openWa.onclick = function(){
+        const link = prepareWaLink(name || '—', phone, country, notes || '—');
+        window.open(link, '_blank');
+      };
+
+      // simulate sending to CRM: here we just log in console
+      console.log('LEAD:', {name, phone, country, notes, time: new Date().toISOString()});
+      // In production: replace console.log with fetch() to your endpoint.
+    });
+
+    closeModal.addEventListener('click', closeModalFn);
+    modal.addEventListener('click', function(e){ if(e.target === modal) closeModalFn(); });
+
+    // quick "call" button on header
+    document.getElementById('callBtn')?.addEventListener('click', function(){
+      window.open('https://wa.me/36307148961','_blank');
+    });
+  </script>
+</body>
+</html>
